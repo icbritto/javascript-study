@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Aritmeticos</title>
+    <style>
+        body {
+            font: normal 16pt Segoe UI;
+            background-color: rgb(49, 49, 49);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>Exemplos de Atribuicoes Simples</p>
+
+    <script>
+        //atribuicao simples
+        let a = 5 + 3
+        let b = a % 5
+        let c = 5 * b ** 2
+        let d = 10 - a / 2
+        let e = 6 * 2 / d
+        let f = b % e + 4 / e
+
+        document.writeln(
+            `a = 5 + 3 <br/> a = ${ a } <br/>
+            b = a % 5 <br/> b = ${ b } <br/>
+            c = 5 * b ** 2 <br/> c = ${ c } <br/>
+            d = 10 - a / 2 <br/> d = ${ d } <br/>
+            e = 6 * 2 / d <br/> e = ${ e } <br/>
+            f = b % e + 4 / e <br/> f = ${ f } <br/>`
+        )
+
+        let taxaI = Number(window.prompt('Taxa atual: '))
+        let taxaT = Number(window.prompt('Periodo da taxa atual (meses): '))
+        let taxaQ = Number(window.prompt('Periodo da taxa desejado (1-12 meses): '))
+        
+        let tI = taxaI / 100
+
+        let taxaR = (taxaQ / taxaT)
+        //let tR = taxaR.toLocaleString('pt-BR', { style: 'percent', minimumFractionDigits: 4 })
+        
+        let taxaF = ((( 1 + tI ) ** taxaR) - 1) / 100
+        let i = taxaF.toLocaleString('pt-BR', { style: 'percent', minimumFractionDigits: 4 })
+
+        document.writeln('Conversor de taxa de juros')
+        document.writeln(
+            `Taxa atual: ${tI} <br/>
+            Periodo da taxa atual (meses): ${taxaT} <br/>
+            Periodo da taxa desejado (meses): ${taxaQ} <br/>
+            Resultado: ${i}`
+        )
+    </script>
+</body>
+</html>

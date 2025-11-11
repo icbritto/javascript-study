@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <style>
+        body {
+            font: normal 16pt Segoe UI;
+            background-color: rgb(49, 49, 49);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        // operadores relacionais
+        let a = 5 > 2 // maior que
+        let b = 7 < 4 // menor que
+        let c = 8 >= 8 // maior ou igual
+        let d = 9 <= 7 // menor ou igual
+        let e = 5 == 5 // igual
+        let f = 4 != 4 // diferente
+
+        // operadores de identidade
+        let a1 = 5 == 5 // teste igualdade (mesmo sendo de tipos diferentes)
+        let b1 = 5 == '5' // teste igualdade (mesmo sendo de tipos diferentes)
+        let c1 = 5 === '5' // teste igualdade (deve ser identico)
+        let d1 = 5 === 5 // teste igualdade (deve ser identico)
+
+        // operadores logicos
+        let a2 = !true // negacao (true = false, false = true)
+        let b2 = true && false // conjuncao (true + true = true, true + false = false, false + true = false, false + false = false)
+        let c2 = true || false // disjuncao (true + true = true, true + false = true, false + true = true, false + false = false)
+
+        // operadores ternarios
+        let a3 = (5 > 2) ? 'maior' : 'menor' // 'teste' ? 'true' : 'false'
+        
+        document.writeln(
+            `<br/> 
+            a = 5 > 2 <br/> a = ${ a } <br/>
+            b = 7 < 4 <br/> b = ${ b } <br/>
+            c = 8 >= 8 <br/> c = ${ c } <br/>
+            d = 9 <= 7 <br/> d = ${ d } <br/>
+            e = 5 == 5 <br/> e = ${ e } <br/>
+            f = 4 != 4 <br/> f = ${ f } <br/>`
+        )
+        document.writeln(
+            `<br/> 
+            a1 = 5 == 5 <br/> a1 = ${ a1 } <br/>
+            b1 = 5 == '5' <br/> b1 = ${ b1 } <br/>
+            c1 = 5 === '5' <br/> c1 = ${ c1 } <br/>
+            d1 = 5 === 5 <br/> d1 = ${ d1 } <br/>`
+        )
+        document.writeln(
+            `<br/> 
+            a2 = !true <br/> a2 = ${ a2 } <br/>
+            b2 = true && false <br/> b2 = ${ b2 } <br/>
+            c2 = true || false <br/> c2 = ${ c2 } <br/>`
+        )
+        document.writeln(
+            `<br/> 
+            a3 = (5 > 2) ? 'maior' : 'menor' <br/> a3 = ${ a3 } <br/>`
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            font: normal 14pt Segoe UI;
+            background-color: rgb(20, 20, 20);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado: </p>
+    <p>Apredendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id = "msg">Clique em mim</div>
+    <script>
+        let corpo = window.document.body
+        let p1 = window.document.getElementsByTagName('p')[1]
+
+        window.document.writeln('Esta escrito assim: ' + p1.innerHTML)
+        corpo.style.background = 'black'
+        p1.style.color = 'green'
+
+        /*
+        let d = window.document.getElementById('msg')
+        d.style.background = 'blue'
+        d.innerText = 'Estou aguardando...'
+        //window.document.getElementById('msg').innerText = 'Ola'
+        */
+
+        /*
+        let d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Ola'
+        */
+
+        let d = window.document.querySelector('div#msg') // use '#' para ID e '.' para classe
+        d.style.background = 'blue'
+    </script>
+</body>
+</html>

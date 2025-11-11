@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Nacionalidade</title>
+    <style>
+        body {
+            font: normal 16pt Segoe UI;
+            background-color: black;
+            color: white;
+        }
+        input#txtnac {
+            font: bold 12pt Consolas;
+        }
+        div#res {
+            font: normal 14pt Consolas;
+            margin-top: 10%;
+        }
+        input#verifbut {
+            background: white;
+        }
+        p.res {
+            background: green;
+            color: white;
+            width: fit-content;
+        }
+        p.resi {
+            background: red;
+            color: white;
+            width: fit-content;
+        }
+        p.resf {
+            background: yellow;
+            color: black;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificar de Nacionalidade</h1>
+
+    Informe o pais onde mora: <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar" id="verifbut" onclick="verif()">
+
+    <div id="res">
+        
+    </div>
+
+    <script>
+        let txtnac = document.querySelector('input#txtnac')
+
+        verifbut.addEventListener('mousedown', clicar)
+        verifbut.addEventListener('mouseup', sair)
+
+        function clicar() {
+            verifbut.style.background = 'yellow'
+        }
+        function sair() {
+            verifbut.style.background = 'white'
+        }
+        
+        function verif() {
+            let txtnac = document.querySelector('input#txtnac')
+            let res = document.querySelector('div#res')
+            let nac = String(txtnac.value)
+            
+            if (nac == '') {
+                res.innerHTML = `<p class="resi">Obrigatorio informar um valor.</p>`
+            } else {
+                if (nac == 'Brasil') {
+                    res.innerHTML = `<p class="res">Voce e brasileiro!</p>`
+                } else {
+                    res.innerHTML = `<p class="resf">Voce e estrageiro!</p>`
+                }
+            }
+        }
+    </script>
+</body>
+</html>

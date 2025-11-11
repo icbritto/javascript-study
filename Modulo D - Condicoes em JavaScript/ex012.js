@@ -1,0 +1,12 @@
+let agora = new Date()
+let hora = agora.getHours()
+
+console.log(`Agora sao ${hora} horas.`)
+
+if (hora < 12) {
+    console.log(`Bom dia!`)
+} else if (hora <= 18) {
+    console.log(`Bom tarde!`)
+} else {
+    console.log(`Boa noite!`)
+}

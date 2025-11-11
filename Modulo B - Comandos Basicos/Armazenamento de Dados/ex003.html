@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Programa</title>
+    <style>
+        body {
+            background-color: rgb(44, 44, 44); /* Comentario em CSS */
+            font: normal 16px Segoe UI;
+        }
+        h1 {
+            color: white;
+        }
+        p {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ola, Mundo!</h1>
+    <p>Ja me livrei da maldicao.</p> <!-- Isso e um comentario -->
+    <script>
+        let nome = String(window.prompt('Informe seu nome completo: '))
+        let idade = Number.parseInt(window.prompt('Sua idade: '))
+        let n1 = Number(window.prompt('Digite um numero: '))
+        let n2 = Number(window.prompt('Digite um numero (diferente) novamente: '))
+
+        //let n1 = Number.parseInt(window.prompt('Digite um numero: '))
+        //let n2 = Number.parseInt(window.prompt('Digite um numero novamente: '))
+
+        //let n1 = Number.parseFloat(window.prompt('Digite um numero: '))
+        //let n2 = Number.parseFloat(window.prompt('Digite um numero novamente: '))
+
+        //let n1 = String(window.prompt('Digite um numero: '))
+        //let n2 = String(window.prompt('Digite um numero novamente: '))
+
+        let soma = n1 + n2
+        let divisao = n1 / n2
+
+        //window.alert('A soma dos numeros eh: ' + soma)
+        window.alert(`A some entre ${n1} e ${n2} e igual a ${soma}`)
+        window.alert(`A divisao entre ${n1} e ${n2} e igual a ${divisao}`)
+        //(number + number) para adicao
+        //(string + string) para concatenacao
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06 - Exercicio 04</title>
+    <style>
+        body {
+            font: normal 16px Segoe UI;
+            background-color: rgb(53, 53, 53);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <script>
+        let name = window.prompt('Informe seu nome: ')
+        let salary = (window.prompt('Informe seu salario aproximado: '))
+        let s = salary.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // define um tipo especifico de formatacao numerica
+        
+        document.writeln(`Ola ${name}, <br/>seu nome tem ${name.length} letras.<br/>`)
+        document.writeln(`Seu nome tem ${name.length} letras.<br/>`)
+        document.writeln(`Seu nome em maiusculas e ${name.toUpperCase()}.<br/>`)
+        document.writeln(`Seu nome em minusculas e ${name.toLowerCase()}.`)
+        document.writeln(`Seu salario mensal e ${s}.`)
+    </script>
+</body>
+</html>
